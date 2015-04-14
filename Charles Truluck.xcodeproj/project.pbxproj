@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56998C411ADDC44300BB73B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56998C401ADDC44300BB73B9 /* AppDelegate.swift */; };
+		56998C431ADDC44300BB73B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56998C421ADDC44300BB73B9 /* ViewController.swift */; };
+		56998C461ADDC44300BB73B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56998C441ADDC44300BB73B9 /* Main.storyboard */; };
+		56998C481ADDC44300BB73B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56998C471ADDC44300BB73B9 /* Images.xcassets */; };
+		56998C4B1ADDC44300BB73B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56998C491ADDC44300BB73B9 /* LaunchScreen.xib */; };
+		56998C571ADDC44300BB73B9 /* Charles_TruluckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56998C561ADDC44300BB73B9 /* Charles_TruluckTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56998C511ADDC44300BB73B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56998C331ADDC44300BB73B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56998C3A1ADDC44300BB73B9;
+			remoteInfo = "Charles Truluck";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		56998C3B1ADDC44300BB73B9 /* Charles Truluck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charles Truluck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56998C3F1ADDC44300BB73B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56998C401ADDC44300BB73B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		56998C421ADDC44300BB73B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		56998C451ADDC44300BB73B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		56998C471ADDC44300BB73B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		56998C4A1ADDC44300BB73B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		56998C501ADDC44300BB73B9 /* Charles TruluckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Charles TruluckTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56998C551ADDC44300BB73B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56998C561ADDC44300BB73B9 /* Charles_TruluckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charles_TruluckTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56998C381ADDC44300BB73B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56998C4D1ADDC44300BB73B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56998C321ADDC44300BB73B9 = {
+			isa = PBXGroup;
+			children = (
+				56998C3D1ADDC44300BB73B9 /* Charles Truluck */,
+				56998C531ADDC44300BB73B9 /* Charles TruluckTests */,
+				56998C3C1ADDC44300BB73B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56998C3C1ADDC44300BB73B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56998C3B1ADDC44300BB73B9 /* Charles Truluck.app */,
+				56998C501ADDC44300BB73B9 /* Charles TruluckTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56998C3D1ADDC44300BB73B9 /* Charles Truluck */ = {
+			isa = PBXGroup;
+			children = (
+				56998C401ADDC44300BB73B9 /* AppDelegate.swift */,
+				56998C421ADDC44300BB73B9 /* ViewController.swift */,
+				56998C441ADDC44300BB73B9 /* Main.storyboard */,
+				56998C471ADDC44300BB73B9 /* Images.xcassets */,
+				56998C491ADDC44300BB73B9 /* LaunchScreen.xib */,
+				56998C3E1ADDC44300BB73B9 /* Supporting Files */,
+			);
+			path = "Charles Truluck";
+			sourceTree = "<group>";
+		};
+		56998C3E1ADDC44300BB73B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				56998C3F1ADDC44300BB73B9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56998C531ADDC44300BB73B9 /* Charles TruluckTests */ = {
+			isa = PBXGroup;
+			children = (
+				56998C561ADDC44300BB73B9 /* Charles_TruluckTests.swift */,
+				56998C541ADDC44300BB73B9 /* Supporting Files */,
+			);
+			path = "Charles TruluckTests";
+			sourceTree = "<group>";
+		};
+		56998C541ADDC44300BB73B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				56998C551ADDC44300BB73B9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56998C3A1ADDC44300BB73B9 /* Charles Truluck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56998C5A1ADDC44300BB73B9 /* Build configuration list for PBXNativeTarget "Charles Truluck" */;
+			buildPhases = (
+				56998C371ADDC44300BB73B9 /* Sources */,
+				56998C381ADDC44300BB73B9 /* Frameworks */,
+				56998C391ADDC44300BB73B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Charles Truluck";
+			productName = "Charles Truluck";
+			productReference = 56998C3B1ADDC44300BB73B9 /* Charles Truluck.app */;
+			productType = "com.apple.product-type.application";
+		};
+		56998C4F1ADDC44300BB73B9 /* Charles TruluckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56998C5D1ADDC44300BB73B9 /* Build configuration list for PBXNativeTarget "Charles TruluckTests" */;
+			buildPhases = (
+				56998C4C1ADDC44300BB73B9 /* Sources */,
+				56998C4D1ADDC44300BB73B9 /* Frameworks */,
+				56998C4E1ADDC44300BB73B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56998C521ADDC44300BB73B9 /* PBXTargetDependency */,
+			);
+			name = "Charles TruluckTests";
+			productName = "Charles TruluckTests";
+			productReference = 56998C501ADDC44300BB73B9 /* Charles TruluckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56998C331ADDC44300BB73B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Charles Truluck";
+				TargetAttributes = {
+					56998C3A1ADDC44300BB73B9 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					56998C4F1ADDC44300BB73B9 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 56998C3A1ADDC44300BB73B9;
+					};
+				};
+			};
+			buildConfigurationList = 56998C361ADDC44300BB73B9 /* Build configuration list for PBXProject "Charles Truluck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 56998C321ADDC44300BB73B9;
+			productRefGroup = 56998C3C1ADDC44300BB73B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56998C3A1ADDC44300BB73B9 /* Charles Truluck */,
+				56998C4F1ADDC44300BB73B9 /* Charles TruluckTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56998C391ADDC44300BB73B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56998C461ADDC44300BB73B9 /* Main.storyboard in Resources */,
+				56998C4B1ADDC44300BB73B9 /* LaunchScreen.xib in Resources */,
+				56998C481ADDC44300BB73B9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56998C4E1ADDC44300BB73B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56998C371ADDC44300BB73B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56998C431ADDC44300BB73B9 /* ViewController.swift in Sources */,
+				56998C411ADDC44300BB73B9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56998C4C1ADDC44300BB73B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56998C571ADDC44300BB73B9 /* Charles_TruluckTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56998C521ADDC44300BB73B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56998C3A1ADDC44300BB73B9 /* Charles Truluck */;
+			targetProxy = 56998C511ADDC44300BB73B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		56998C441ADDC44300BB73B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56998C451ADDC44300BB73B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		56998C491ADDC44300BB73B9 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56998C4A1ADDC44300BB73B9 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56998C581ADDC44300BB73B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		56998C591ADDC44300BB73B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56998C5B1ADDC44300BB73B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Charles Truluck/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		56998C5C1ADDC44300BB73B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Charles Truluck/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		56998C5E1ADDC44300BB73B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Charles TruluckTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Charles Truluck.app/Charles Truluck";
+			};
+			name = Debug;
+		};
+		56998C5F1ADDC44300BB73B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Charles TruluckTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Charles Truluck.app/Charles Truluck";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56998C361ADDC44300BB73B9 /* Build configuration list for PBXProject "Charles Truluck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56998C581ADDC44300BB73B9 /* Debug */,
+				56998C591ADDC44300BB73B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56998C5A1ADDC44300BB73B9 /* Build configuration list for PBXNativeTarget "Charles Truluck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56998C5B1ADDC44300BB73B9 /* Debug */,
+				56998C5C1ADDC44300BB73B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		56998C5D1ADDC44300BB73B9 /* Build configuration list for PBXNativeTarget "Charles TruluckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56998C5E1ADDC44300BB73B9 /* Debug */,
+				56998C5F1ADDC44300BB73B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56998C331ADDC44300BB73B9 /* Project object */;
+}
