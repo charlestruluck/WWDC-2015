@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561CF06E1AE5687500037CCB /* ProjectsScroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561CF06D1AE5687500037CCB /* ProjectsScroller.xib */; };
+		561CF0741AE56F5D00037CCB /* ProjectsScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561CF0731AE56F5D00037CCB /* ProjectsScroller.swift */; };
 		565C39031AE1CFAA007DA940 /* AboutMeScroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565C39021AE1CFAA007DA940 /* AboutMeScroller.xib */; };
 		565C39051AE1DC92007DA940 /* AboutMeScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C39041AE1DC92007DA940 /* AboutMeScroller.swift */; };
 		56998C411ADDC44300BB73B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56998C401ADDC44300BB73B9 /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		561CF06D1AE5687500037CCB /* ProjectsScroller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsScroller.xib; sourceTree = "<group>"; };
+		561CF0731AE56F5D00037CCB /* ProjectsScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsScroller.swift; sourceTree = "<group>"; };
 		565C39021AE1CFAA007DA940 /* AboutMeScroller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutMeScroller.xib; sourceTree = "<group>"; };
 		565C39041AE1DC92007DA940 /* AboutMeScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeScroller.swift; sourceTree = "<group>"; };
 		56998C3B1ADDC44300BB73B9 /* Charles Truluck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charles Truluck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +70,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		561CF0701AE56A7200037CCB /* Previous Projects */ = {
+			isa = PBXGroup;
+			children = (
+				561CF06D1AE5687500037CCB /* ProjectsScroller.xib */,
+				561CF0731AE56F5D00037CCB /* ProjectsScroller.swift */,
+				56998C671ADE213900BB73B9 /* ProjectsViewController.swift */,
+			);
+			name = "Previous Projects";
+			sourceTree = "<group>";
+		};
+		561CF0711AE56A9D00037CCB /* About Me */ = {
+			isa = PBXGroup;
+			children = (
+				565C39021AE1CFAA007DA940 /* AboutMeScroller.xib */,
+				565C39041AE1DC92007DA940 /* AboutMeScroller.swift */,
+				56998C601ADE0C2B00BB73B9 /* AboutMeViewController.swift */,
+			);
+			name = "About Me";
+			sourceTree = "<group>";
+		};
+		561CF0721AE56AD800037CCB /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				56998C621ADE14FD00BB73B9 /* PushNoAnimationSegue.swift */,
+				56998C401ADDC44300BB73B9 /* AppDelegate.swift */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
 		56998C321ADDC44300BB73B9 = {
 			isa = PBXGroup;
 			children = (
@@ -87,16 +120,13 @@
 		56998C3D1ADDC44300BB73B9 /* Charles Truluck */ = {
 			isa = PBXGroup;
 			children = (
-				56998C671ADE213900BB73B9 /* ProjectsViewController.swift */,
-				56998C621ADE14FD00BB73B9 /* PushNoAnimationSegue.swift */,
-				56998C401ADDC44300BB73B9 /* AppDelegate.swift */,
-				56998C421ADDC44300BB73B9 /* ViewController.swift */,
-				565C39021AE1CFAA007DA940 /* AboutMeScroller.xib */,
+				561CF0721AE56AD800037CCB /* Misc */,
+				561CF0711AE56A9D00037CCB /* About Me */,
+				561CF0701AE56A7200037CCB /* Previous Projects */,
 				56998C441ADDC44300BB73B9 /* Main.storyboard */,
-				565C39041AE1DC92007DA940 /* AboutMeScroller.swift */,
-				56998C601ADE0C2B00BB73B9 /* AboutMeViewController.swift */,
-				56998C471ADDC44300BB73B9 /* Images.xcassets */,
 				56998C491ADDC44300BB73B9 /* LaunchScreen.xib */,
+				56998C421ADDC44300BB73B9 /* ViewController.swift */,
+				56998C471ADDC44300BB73B9 /* Images.xcassets */,
 				56998C3E1ADDC44300BB73B9 /* Supporting Files */,
 			);
 			path = "Charles Truluck";
@@ -209,6 +239,7 @@
 			files = (
 				565C39031AE1CFAA007DA940 /* AboutMeScroller.xib in Resources */,
 				56998C461ADDC44300BB73B9 /* Main.storyboard in Resources */,
+				561CF06E1AE5687500037CCB /* ProjectsScroller.xib in Resources */,
 				56998C4B1ADDC44300BB73B9 /* LaunchScreen.xib in Resources */,
 				56998C481ADDC44300BB73B9 /* Images.xcassets in Resources */,
 			);
@@ -228,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561CF0741AE56F5D00037CCB /* ProjectsScroller.swift in Sources */,
 				56998C431ADDC44300BB73B9 /* ViewController.swift in Sources */,
 				56998C681ADE213900BB73B9 /* ProjectsViewController.swift in Sources */,
 				56998C611ADE0C2B00BB73B9 /* AboutMeViewController.swift in Sources */,

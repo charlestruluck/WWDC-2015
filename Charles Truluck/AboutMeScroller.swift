@@ -14,7 +14,8 @@ class AboutMeScroller: UIView {
     @IBOutlet weak var mapView: MKMapView!
     
     override func awakeFromNib() {
-    
+        
+    //Map Stuff
     let location = CLLocationCoordinate2D(
         latitude: 32.7738,
         longitude: -79.9671
