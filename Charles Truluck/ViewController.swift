@@ -12,6 +12,7 @@ var run: Bool = true
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var meImage: UIImageView!
     @IBOutlet weak var backgroundView: UIImageView!
     @IBOutlet weak var projectsButton: UIButton!
     @IBOutlet weak var aboutMeButton: UIButton!
@@ -20,11 +21,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let simAlert = UIAlertView()
-        
-        simAlert.title = "Simulator Detected!"
-        simAlert.message = "This app was designed to run on an iPhone 6. Some effects like parallax won't work!"
-        simAlert.addButtonWithTitle("Alright!")
+//        let simAlert = UIAlertController(title: "Simulator Detected", message: "This application was designed to be used on an iPhone 6. Some effects like parallax won't work!", preferredStyle: .Alert)
+//        let dismiss = UIAlertAction(title: "Dismiss", style: .Default){ (action) in
+//        }
+//        simAlert.addAction(dismiss)
         
         let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y",
             type: .TiltAlongVerticalAxis)
@@ -52,12 +52,15 @@ class ViewController: UIViewController {
         projectsButton.alpha = 0
         helloLabel.alpha = 0
         aboutMeButton.alpha = 0
+        meImage.alpha = 0
         
         if run == true {
             
-            #if (arch(i386) || arch(x86_64)) && os(iOS)
-                simAlert.show()
-            #endif
+//            #if (arch(i386) || arch(x86_64)) && os(iOS)
+//                self.presentViewController(simAlert, animated: true) {
+//                    
+//                }
+//            #endif
             
         UIView.animateWithDuration(1.0, delay: 1.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             
@@ -80,17 +83,18 @@ class ViewController: UIViewController {
                                 UIView.animateWithDuration(1.0, delay: 0.5, usingSpringWithDamping: 3.0, initialSpringVelocity: 3.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: ({
                                     
                                     self.helloLabel.frame.origin.y = 10
+                                    self.meImage.frame.origin.y = -600
                                     
                                 }), completion: { finish in
-                                    
-                                    UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-                                        
-                                        let run: Float = 0
-                                        
-                                        self.projectsButton.alpha = 1
-                                        self.aboutMeButton.alpha = 1
-                                    
-                                        }, completion: nil)
+                                            
+                                            UIView.animateWithDuration(1.0, delay: 0.5, usingSpringWithDamping: 1.0, initialSpringVelocity: 3.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                                                
+                                                self.meImage.frame.origin.y = 200
+                                                self.projectsButton.alpha = 1
+                                                self.aboutMeButton.alpha = 1
+                                                self.meImage.alpha = 1
+                                                
+                                            }, completion: nil)
                                 })
                         })
                 })
@@ -98,15 +102,21 @@ class ViewController: UIViewController {
             run = false
         } else {
             
-            self.helloLabel.frame.origin.y = 10
-            
             UIView.animateWithDuration(1.0, delay: 1.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
                 
                 self.projectsButton.alpha = 1
                 self.helloLabel.alpha = 1
                 self.aboutMeButton.alpha = 1
                 
-            }, completion: nil)
+                }, completion: { finish in
+                    
+                    UIView.animateWithDuration(1.0, delay: 0.3, usingSpringWithDamping: 1.0, initialSpringVelocity: 3.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                        self.helloLabel.frame.origin.y = 10
+                        self.meImage.alpha = 1
+                        self.aboutMeButton.alpha = 1
+                        self.projectsButton.alpha = 1
+                    }, completion: nil)
+            })
         }
     }
     
