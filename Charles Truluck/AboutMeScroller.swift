@@ -30,6 +30,6 @@ class AboutMeScroller: UIView {
     annotation.title = "Charleston"
     annotation.subtitle = "South Carolina"
     mapView.addAnnotation(annotation)
-    
+        
     }
 }

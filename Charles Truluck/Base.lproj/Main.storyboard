@@ -20,8 +20,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="i9X-hX-8kr">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" WWDC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTb-uz-g6b">
-                                <rect key="frame" x="247" y="579" width="75" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WWDC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTb-uz-g6b">
+                                <rect key="frame" x="247" y="579" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                                     <action selector="aboutMeAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Wr9-b0-Or9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WWDC-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ytb-G2-fCy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ytb-G2-fCy">
                                 <rect key="frame" x="180" y="180" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="bfW-bO-GpO"/>
@@ -71,8 +71,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9b-jZ-dBf">
-                                <rect key="frame" x="321" y="579" width="20" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9b-jZ-dBf">
+                                <rect key="frame" x="318" y="579" width="20" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -95,6 +95,7 @@
                             <constraint firstAttribute="centerY" secondItem="a0o-uk-gPv" secondAttribute="centerY" id="Y4P-ha-toR"/>
                             <constraint firstItem="SK0-6V-fLE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ZRB-Cp-1K5"/>
                             <constraint firstAttribute="centerX" secondItem="a0o-uk-gPv" secondAttribute="centerX" id="fST-Vl-9Ox"/>
+                            <constraint firstItem="a9b-jZ-dBf" firstAttribute="leading" secondItem="ZTb-uz-g6b" secondAttribute="trailing" id="mbp-6O-fNm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QAp-pV-dEW"/>
@@ -147,9 +148,6 @@
                                     <constraint firstAttribute="width" constant="600" id="m6G-0a-hXs"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FC-lc-hq7">
-                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
-                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIt-d4-z7z">
                                 <rect key="frame" x="249" y="20" width="102" height="25"/>
                                 <constraints>
@@ -175,6 +173,9 @@
                                     <action selector="backAction:" destination="f3E-u4-9po" eventType="touchUpInside" id="HSw-Ny-IKg"/>
                                 </connections>
                             </button>
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FC-lc-hq7">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -269,7 +270,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pzr-JX-1U9">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pzr-JX-1U9">
                                 <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                             </scrollView>
                         </subviews>
@@ -327,10 +328,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="WWDC-icon" width="576" height="561"/>
         <image name="background" width="1080" height="1080"/>
+        <image name="me-Icon" width="576" height="561"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VjB-Bn-0cJ"/>
+        <segue reference="GfI-us-H2w"/>
     </inferredMetricsTieBreakers>
 </document>

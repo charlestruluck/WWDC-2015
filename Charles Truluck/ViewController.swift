@@ -21,10 +21,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let simAlert = UIAlertController(title: "Simulator Detected", message: "This application was designed to be used on an iPhone 6. Some effects like parallax won't work!", preferredStyle: .Alert)
-//        let dismiss = UIAlertAction(title: "Dismiss", style: .Default){ (action) in
-//        }
-//        simAlert.addAction(dismiss)
+        let simAlert = UIAlertController(title: "Simulator Detected", message: "This application was designed to be used on an iPhone 6. Some effects like parallax won't work!", preferredStyle: .Alert)
+        let dismiss = UIAlertAction(title: "Dismiss", style: .Default){ (action) in
+        }
+        simAlert.addAction(dismiss)
         
         let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y",
             type: .TiltAlongVerticalAxis)
@@ -56,11 +56,11 @@ class ViewController: UIViewController {
         
         if run == true {
             
-//            #if (arch(i386) || arch(x86_64)) && os(iOS)
-//                self.presentViewController(simAlert, animated: true) {
-//                    
-//                }
-//            #endif
+            #if (arch(i386) || arch(x86_64)) && os(iOS)
+                self.presentViewController(simAlert, animated: true) {
+                    
+                }
+            #endif
             
         UIView.animateWithDuration(1.0, delay: 1.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             
@@ -102,6 +102,8 @@ class ViewController: UIViewController {
             run = false
         } else {
             
+            self.helloLabel.text = "I'm Charles!"
+            
             UIView.animateWithDuration(1.0, delay: 1.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
                 
                 self.projectsButton.alpha = 1
@@ -127,6 +129,7 @@ class ViewController: UIViewController {
             self.aboutMeButton.alpha = 0
             self.projectsButton.alpha = 0
             self.helloLabel.alpha = 0
+            self.meImage.alpha = 0
             
             }, completion: { finish in
                 
@@ -144,6 +147,7 @@ class ViewController: UIViewController {
             self.aboutMeButton.alpha = 0
             self.projectsButton.alpha = 0
             self.helloLabel.alpha = 0
+            self.meImage.alpha = 0
             
             }, completion: { finish in
                 
