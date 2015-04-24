@@ -20,6 +20,9 @@
 		56998C611ADE0C2B00BB73B9 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56998C601ADE0C2B00BB73B9 /* AboutMeViewController.swift */; };
 		56998C631ADE14FD00BB73B9 /* PushNoAnimationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56998C621ADE14FD00BB73B9 /* PushNoAnimationSegue.swift */; };
 		56998C681ADE213900BB73B9 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56998C671ADE213900BB73B9 /* ProjectsViewController.swift */; };
+		56D01A951AE9839A00E7940F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D01A941AE9839A00E7940F /* GameScene.swift */; };
+		56D01A971AE983A300E7940F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56D01A961AE983A300E7940F /* GameScene.sks */; };
+		56D01A991AE985B500E7940F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D01A981AE985B500E7940F /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		56998C601ADE0C2B00BB73B9 /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		56998C621ADE14FD00BB73B9 /* PushNoAnimationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNoAnimationSegue.swift; sourceTree = "<group>"; };
 		56998C671ADE213900BB73B9 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		56D01A941AE9839A00E7940F /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		56D01A961AE983A300E7940F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		56D01A981AE985B500E7940F /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,9 @@
 				56998C441ADDC44300BB73B9 /* Main.storyboard */,
 				56998C491ADDC44300BB73B9 /* LaunchScreen.xib */,
 				56998C421ADDC44300BB73B9 /* ViewController.swift */,
+				56D01A941AE9839A00E7940F /* GameScene.swift */,
+				56D01A981AE985B500E7940F /* GameViewController.swift */,
+				56D01A961AE983A300E7940F /* GameScene.sks */,
 				56998C471ADDC44300BB73B9 /* Images.xcassets */,
 				56998C3E1ADDC44300BB73B9 /* Supporting Files */,
 			);
@@ -242,6 +251,7 @@
 				56998C461ADDC44300BB73B9 /* Main.storyboard in Resources */,
 				561CF06E1AE5687500037CCB /* ProjectsScroller.xib in Resources */,
 				56998C4B1ADDC44300BB73B9 /* LaunchScreen.xib in Resources */,
+				56D01A971AE983A300E7940F /* GameScene.sks in Resources */,
 				56998C481ADDC44300BB73B9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +272,9 @@
 			files = (
 				561CF0741AE56F5D00037CCB /* ProjectsScroller.swift in Sources */,
 				56998C431ADDC44300BB73B9 /* ViewController.swift in Sources */,
+				56D01A951AE9839A00E7940F /* GameScene.swift in Sources */,
 				56998C681ADE213900BB73B9 /* ProjectsViewController.swift in Sources */,
+				56D01A991AE985B500E7940F /* GameViewController.swift in Sources */,
 				56998C611ADE0C2B00BB73B9 /* AboutMeViewController.swift in Sources */,
 				56998C411ADDC44300BB73B9 /* AppDelegate.swift in Sources */,
 				56998C631ADE14FD00BB73B9 /* PushNoAnimationSegue.swift in Sources */,

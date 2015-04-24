@@ -8,9 +8,9 @@
 
 import UIKit
 
-var developer: String = "Charles"
-
 class ProjectsViewController: UIViewController, UIScrollViewDelegate {
+    
+    var developer: String = "Charles"
     
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var divView: UIView!
@@ -19,6 +19,10 @@ class ProjectsViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var backgroundView: UIImageView!
     
     override func viewDidLoad() {
+        
+        self.scrollView.contentOffset = CGPointMake(self.scrollView.contentOffset.x, 0)
+        
+        scrollView.delegate = self
         
         backButton.layer.cornerRadius = 6
         backButton.layer.borderWidth = 1
@@ -58,8 +62,6 @@ class ProjectsViewController: UIViewController, UIScrollViewDelegate {
     
         }, completion: nil)
         if developer == "Charles"{
-            println("Wow, WWDC has been a dream for 2 years now! Finally- I'm 13 and I can apply for this once-in-a-lifetime oppertunity to open doors and windows in my future! I'll be on the road (no, Delta probably. Or American.) to San Francisco, and oh what a good time I will have. <3")
-            println("But I'm so worried- what if I don't finish everything! I'm wasting valuble time puting this in here! Well hopefully they assume this is creativity? Typing what I'm thinking is a form of essay. WAIT- when I took the SATs I learned something- (Well a lot actually) that you give it your all and hope for the best. I still haven't gotten my score back on that things too, how long does it take? :0")
             // °_°
             //^_^
             //:P

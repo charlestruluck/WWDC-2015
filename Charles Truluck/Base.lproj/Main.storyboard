@@ -35,7 +35,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <state key="normal" title="Projects">
-                                    <color key="titleColor" red="1" green="0.47843137254901957" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.93725490196078431" green="0.37647058823529411" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -51,14 +51,14 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <state key="normal" title="About Me">
-                                    <color key="titleColor" red="1" green="0.47977697183356738" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.93725490196078431" green="0.37647058823529411" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="aboutMeAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Wr9-b0-Or9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ytb-G2-fCy">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ytb-G2-fCy">
                                 <rect key="frame" x="180" y="180" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="bfW-bO-GpO"/>
@@ -77,6 +77,21 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6A-ka-eYm">
+                                <rect key="frame" x="239" y="506" width="122" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KXh-3J-DJv"/>
+                                    <constraint firstAttribute="width" constant="122" id="XS5-Ly-Wnd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <state key="normal" title="Game!">
+                                    <color key="titleColor" red="0.93725490196078431" green="0.37647058823529411" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5qv-Bj-AoG" kind="show" id="vpr-Eg-hBN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -86,6 +101,7 @@
                             <constraint firstAttribute="centerX" secondItem="i9X-hX-8kr" secondAttribute="centerX" id="3J8-bc-gco"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZTb-uz-g6b" secondAttribute="bottom" id="7ET-Ib-2xN"/>
                             <constraint firstAttribute="centerX" secondItem="Ytb-G2-fCy" secondAttribute="centerX" id="7LV-dU-ogp"/>
+                            <constraint firstAttribute="centerX" secondItem="u6A-ka-eYm" secondAttribute="centerX" id="9pa-WR-8QV"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SK0-6V-fLE" secondAttribute="bottom" constant="20" id="B2J-6G-Gyg"/>
                             <constraint firstItem="7Kb-ab-5tX" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="C4r-Eq-Svm"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="i9X-hX-8kr" secondAttribute="bottom" constant="-50" id="Gqu-4P-PMp"/>
@@ -93,6 +109,7 @@
                             <constraint firstItem="i9X-hX-8kr" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-50" id="WhT-2M-9nA"/>
                             <constraint firstAttribute="centerY" secondItem="i9X-hX-8kr" secondAttribute="centerY" id="XJb-iE-znY"/>
                             <constraint firstAttribute="centerY" secondItem="a0o-uk-gPv" secondAttribute="centerY" id="Y4P-ha-toR"/>
+                            <constraint firstItem="a9b-jZ-dBf" firstAttribute="top" secondItem="u6A-ka-eYm" secondAttribute="bottom" constant="43" id="YWw-ZX-5tw"/>
                             <constraint firstItem="SK0-6V-fLE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ZRB-Cp-1K5"/>
                             <constraint firstAttribute="centerX" secondItem="a0o-uk-gPv" secondAttribute="centerX" id="fST-Vl-9Ox"/>
                             <constraint firstItem="a9b-jZ-dBf" firstAttribute="leading" secondItem="ZTb-uz-g6b" secondAttribute="trailing" id="mbp-6O-fNm"/>
@@ -102,6 +119,7 @@
                     <connections>
                         <outlet property="aboutMeButton" destination="SK0-6V-fLE" id="YqU-Co-fRS"/>
                         <outlet property="backgroundView" destination="i9X-hX-8kr" id="z0b-ye-ai5"/>
+                        <outlet property="gameButton" destination="u6A-ka-eYm" id="l9z-g5-7vl"/>
                         <outlet property="helloLabel" destination="a0o-uk-gPv" id="LW5-ej-3dv"/>
                         <outlet property="meImage" destination="Ytb-G2-fCy" id="DTk-cd-98R"/>
                         <outlet property="projectsButton" destination="7Kb-ab-5tX" id="fay-kd-mwC"/>
@@ -112,6 +130,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="318"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="I8T-Ho-mwv">
+            <objects>
+                <viewController id="5qv-Bj-AoG" customClass="GameViewController" customModule="Charles_Truluck" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WDq-66-9aF"/>
+                        <viewControllerLayoutGuide type="bottom" id="kNN-nD-Icb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Igd-D1-kMN" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSk-9h-Dnx">
+                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="21W-Yi-O7F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHy-41-0fk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="982"/>
         </scene>
         <!--About Me View Controller-->
         <scene sceneID="jhk-cW-vcV">
@@ -173,7 +220,7 @@
                                     <action selector="backAction:" destination="f3E-u4-9po" eventType="touchUpInside" id="HSw-Ny-IKg"/>
                                 </connections>
                             </button>
-                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FC-lc-hq7">
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FC-lc-hq7" customClass="CustomScrollView" customModule="Charles_Truluck" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                             </scrollView>
                         </subviews>
@@ -270,7 +317,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pzr-JX-1U9">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzr-JX-1U9">
                                 <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                             </scrollView>
                         </subviews>
