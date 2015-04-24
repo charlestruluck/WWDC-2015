@@ -12,6 +12,8 @@ import SceneKit
 
 class GameScene: SKScene {
     
+    var playerCircle: SKShapeNode = SKShapeNode(circleOfRadius: 15)
+    
     var mainPipe: SKSpriteNode = SKSpriteNode()
     var pipes = [SKSpriteNode]()
     
@@ -25,7 +27,17 @@ class GameScene: SKScene {
         
         mainPipe = SKSpriteNode(color: UIColor.greenColor(), size: CGSize(width: view.bounds.size.width / 5, height: self.size.height))
         
+        playerCircle.physicsBody = SKPhysicsBody(circleOfRadius: 15)
+        playerCircle.physicsBody!.dynamic = false
+        
+        playerCircle.zPosition = 9
+        playerCircle.lineWidth = 0
+        
+        playerCircle.fillColor = UIColor.yellowColor()
+        playerCircle.position = CGPoint(x: 150, y: 150)
+        
         self.spawnPipeRow(0)
+        self.addChild(playerCircle)
         
     }
     
