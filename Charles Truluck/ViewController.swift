@@ -62,37 +62,37 @@ class ViewController: UIViewController {
         
         if run == true {
             
-            #if (arch(i386) || arch(x86_64)) && os(iOS)
-                self.presentViewController(simAlert, animated: true) {
-                    
-                }
-            #endif
+//            #if (arch(i386) || arch(x86_64)) && os(iOS)
+//                self.presentViewController(simAlert, animated: true) {
+//                    
+//                }
+//            #endif
+//
+//        UIView.animateWithDuration(1.0, delay: 1.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+//            
+//            self.helloLabel.alpha = 1
+//            
+//            }, completion: { finish in
+//                UIView.animateWithDuration(1.0, delay: 0.5, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+//                    
+//                    self.helloLabel.alpha = 0
+//                    
+//                    }, completion: { finish in
+//                        
+//                        self.helloLabel.text = "I'm Charles!"
+//                        
+//                        UIView.animateWithDuration(1.0, delay: 0.5, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+//                            
+//                            self.helloLabel.alpha = 1
+//                            
+//                            }, completion: { finish in
+//                                UIView.animateWithDuration(1.0, delay: 0.5, usingSpringWithDamping: 3.0, initialSpringVelocity: 3.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: ({
+//                                    
+//                                    self.helloLabel.frame.origin.y = 10
+//                                    self.meImage.frame.origin.y = -600
+//                                    
+//                                }), completion: { finish in
             
-        UIView.animateWithDuration(1.0, delay: 1.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-            
-            self.helloLabel.alpha = 1
-            
-            }, completion: { finish in
-                UIView.animateWithDuration(1.0, delay: 0.5, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
-                    
-                    self.helloLabel.alpha = 0
-                    
-                    }, completion: { finish in
-                        
-                        self.helloLabel.text = "I'm Charles!"
-                        
-                        UIView.animateWithDuration(1.0, delay: 0.5, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
-                            
-                            self.helloLabel.alpha = 1
-                            
-                            }, completion: { finish in
-                                UIView.animateWithDuration(1.0, delay: 0.5, usingSpringWithDamping: 3.0, initialSpringVelocity: 3.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: ({
-                                    
-                                    self.helloLabel.frame.origin.y = 10
-                                    self.meImage.frame.origin.y = -600
-                                    
-                                }), completion: { finish in
-                                            
                                             UIView.animateWithDuration(1.0, delay: 0.5, usingSpringWithDamping: 1.0, initialSpringVelocity: 3.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                                                 
                                                 self.meImage.frame.origin.y = 200
@@ -102,11 +102,7 @@ class ViewController: UIViewController {
                                                 self.meImage.alpha = 1
                                                 
                                             }, completion: nil)
-                                })
-                        })
-                })
-        })
-            run = false
+                                            run = false
         } else {
             
             self.helloLabel.text = "I'm Charles!"
