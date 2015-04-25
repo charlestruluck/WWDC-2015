@@ -10,27 +10,37 @@ import UIKit
 import SpriteKit
 import SceneKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    var mainPipe: SKSpriteNode = SKSpriteNode()
-    var pipes = [SKSpriteNode]()
+    var mainBuilding: SKSpriteNode = SKSpriteNode()
+    var buildings = [SKSpriteNode]()
     
-    var space: Float = 90
+    var space: Float = 120
     
     var prevNumber: Float = 0
     var maxRange: Float = 225
-    var minRange: Float = -225
+    var minRange: Float = -100
     
     var player: SKShapeNode = SKShapeNode(circleOfRadius: 15)
-    var ground: SKShapeNode = SKShapeNode(rectOfSize: CGSizeMake(500, 100))
+    
+    var ground: SKSpriteNode = SKSpriteNode(imageNamed: "Ground")
+    
+    var playerCatagory: UInt32 = 1
+    var buildingCatagory: UInt32 = 2
+    
+    var pipeSpeed: CGFloat = 2.3
+    
+    var startTap: Bool = false
+    var cancelTouch = false
     
     var groundNode = SKNode()
     
     override func didMoveToView(view: SKView) {
         
-        mainPipe = SKSpriteNode(color: UIColor.greenColor(), size: CGSize(width: view.bounds.size.width / 5, height: self.size.height))
+        mainBuilding = SKSpriteNode(color: UIColor.greenColor(), size: CGSize(width: view.bounds.size.width / 5, height: self.size.height))
         
         self.physicsWorld.gravity = CGVectorMake(0.0, -5.0)
+        self.physicsWorld.contactDelegate = self
         
         player.position = CGPoint(x: self.frame.size.width * 0.35, y: self.frame.size.height * 0.6)
         ground.position = CGPoint(x: self.frame.size.width * 0.5, y: self.frame.size.height / 16)
@@ -41,7 +51,10 @@ class GameScene: SKScene {
         ground.physicsBody!.dynamic = false
         
         player.fillColor = UIColor.yellowColor()
-        ground.fillColor = UIColor.blueColor()
+        
+        player.physicsBody!.contactTestBitMask = buildingCatagory
+        player.physicsBody!.collisionBitMask = buildingCatagory
+        player.physicsBody?.dynamic = false
         
         self.addChild(player)
         self.addChild(ground)
@@ -51,25 +64,34 @@ class GameScene: SKScene {
     func spawnPipeRow(offs: Float) {
         let offset = offs + (space / 2)
         
-        let bottomPipe = (mainPipe as SKSpriteNode).copy() as! SKSpriteNode
-        let topPipe = (mainPipe as SKSpriteNode).copy() as! SKSpriteNode
+        let bottomBuilding = (mainBuilding as SKSpriteNode).copy() as! SKSpriteNode
+        let topBuilding = (mainBuilding as SKSpriteNode).copy() as! SKSpriteNode
+        
+        topBuilding.texture = SKTexture(imageNamed: "Pipe")
+        bottomBuilding.texture = SKTexture(imageNamed: "Pipe")
         
         let xx = self.size.width
         
-        self.setPositionRelativeBot(bottomPipe, x: xx, y: offset)
-        self.setPositionRelativeTop(topPipe, x: xx, y: offset + space)
+        self.setPositionRelativeBot(bottomBuilding, x: xx, y: offset)
+        self.setPositionRelativeTop(topBuilding, x: xx, y: offset + space)
         
-        topPipe.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(topPipe.size.width, topPipe.size.height))
-        bottomPipe.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(bottomPipe.size.width, bottomPipe.size.height))
+        topBuilding.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(topBuilding.size.width, topBuilding.size.height))
+        bottomBuilding.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(bottomBuilding.size.width, bottomBuilding.size.height))
         
-        bottomPipe.physicsBody!.dynamic = false
-        topPipe.physicsBody!.dynamic = false
+        bottomBuilding.physicsBody?.dynamic = false
+        topBuilding.physicsBody?.dynamic = false
         
-        pipes.append(bottomPipe)
-        pipes.append(topPipe)
+        bottomBuilding.physicsBody!.contactTestBitMask = playerCatagory
+        topBuilding.physicsBody!.contactTestBitMask = playerCatagory
         
-        self.addChild(topPipe)
-        self.addChild(bottomPipe)
+        topBuilding.physicsBody!.collisionBitMask = playerCatagory
+        bottomBuilding.physicsBody!.collisionBitMask = playerCatagory
+        
+        buildings.append(bottomBuilding)
+        buildings.append(topBuilding)
+        
+        self.addChild(topBuilding)
+        self.addChild(bottomBuilding)
     }
     
     func setPositionRelativeBot(node: SKSpriteNode, x: CGFloat, y: Float) {
@@ -89,26 +111,41 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        for touch: AnyObject in touches {
-            let location = touch.locationInNode(self)
+        
+        if let physicsBody = player.physicsBody where physicsBody.dynamic == false{
             
-            player.physicsBody!.velocity = CGVectorMake(0, 0)
-            player.physicsBody!.applyImpulse(CGVectorMake(0, 10))
+            player.physicsBody!.dynamic = true
+            player.physicsBody!.velocity = CGVectorMake(0, 175)
+            startTap = true
+        }
+        
+        if (cancelTouch == false) {
+            for touch: AnyObject in touches {
+                
+                let location = touch.locationInNode(self)
+                
+                player.physicsBody!.velocity = CGVectorMake(0, 0)
+                player.physicsBody!.applyImpulse(CGVectorMake(0, 10))
+                
+            }
+        } else {
             
         }
     }
    
     override func update(currentTime: CFTimeInterval) {
         
-        for (var i = 0; i < pipes.count; i++) {
-            
-            let pipe = pipes[i]
-            
-            pipe.position.x -= 5
-            
-            if (i == pipes.count - 1) {
-                if (pipe.position.x < self.size.width - pipe.size.width * 2.0) {
-                    self.spawnPipeRow(self.randomOffset())
+        if (startTap) {
+            for (var i = 0; i < buildings.count; i++) {
+                
+                let building = buildings[i]
+                
+                building.position.x -= pipeSpeed
+                
+                if (i == buildings.count - 1) {
+                    if (building.position.x < self.size.width - building.size.width * 2.0) {
+                        self.spawnPipeRow(self.randomOffset())
+                    }
                 }
             }
         }
@@ -152,6 +189,20 @@ class GameScene: SKScene {
         
         return randomNumber
 
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        
+        if (startTap) {
+            player.physicsBody!.velocity = CGVectorMake(0, 0)
+            
+            for pi in buildings {
+                pi.physicsBody = nil
+                player.physicsBody?.dynamic = false
+                pipeSpeed = 0
+                cancelTouch = true
+            }
+        }
     }
 }
 

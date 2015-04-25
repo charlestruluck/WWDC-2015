@@ -23,6 +23,9 @@
 		56D01A951AE9839A00E7940F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D01A941AE9839A00E7940F /* GameScene.swift */; };
 		56D01A971AE983A300E7940F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56D01A961AE983A300E7940F /* GameScene.sks */; };
 		56D01A991AE985B500E7940F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D01A981AE985B500E7940F /* GameViewController.swift */; };
+		56E937101AEC273E00051A35 /* Pipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 56E9370F1AEC273E00051A35 /* Pipe.png */; };
+		56E937141AEC292C00051A35 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 56E937131AEC292C00051A35 /* Background.png */; };
+		56E937161AEC300900051A35 /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 56E937151AEC300900051A35 /* Ground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		56D01A941AE9839A00E7940F /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		56D01A961AE983A300E7940F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		56D01A981AE985B500E7940F /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		56E9370F1AEC273E00051A35 /* Pipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipe.png; sourceTree = "<group>"; };
+		56E937131AEC292C00051A35 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		56E937151AEC300900051A35 /* Ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,15 +132,13 @@
 		56998C3D1ADDC44300BB73B9 /* Charles Truluck */ = {
 			isa = PBXGroup;
 			children = (
+				56E9370D1AEC269500051A35 /* Game Files */,
 				561CF0721AE56AD800037CCB /* Misc */,
 				561CF0711AE56A9D00037CCB /* About Me */,
 				561CF0701AE56A7200037CCB /* Previous Projects */,
 				56998C441ADDC44300BB73B9 /* Main.storyboard */,
 				56998C491ADDC44300BB73B9 /* LaunchScreen.xib */,
 				56998C421ADDC44300BB73B9 /* ViewController.swift */,
-				56D01A941AE9839A00E7940F /* GameScene.swift */,
-				56D01A981AE985B500E7940F /* GameViewController.swift */,
-				56D01A961AE983A300E7940F /* GameScene.sks */,
 				56998C471ADDC44300BB73B9 /* Images.xcassets */,
 				56998C3E1ADDC44300BB73B9 /* Supporting Files */,
 			);
@@ -164,6 +168,27 @@
 				56998C551ADDC44300BB73B9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56E9370D1AEC269500051A35 /* Game Files */ = {
+			isa = PBXGroup;
+			children = (
+				56E9370E1AEC272000051A35 /* Images */,
+				56D01A941AE9839A00E7940F /* GameScene.swift */,
+				56D01A981AE985B500E7940F /* GameViewController.swift */,
+				56D01A961AE983A300E7940F /* GameScene.sks */,
+			);
+			name = "Game Files";
+			sourceTree = "<group>";
+		};
+		56E9370E1AEC272000051A35 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				56E937151AEC300900051A35 /* Ground.png */,
+				56E937131AEC292C00051A35 /* Background.png */,
+				56E9370F1AEC273E00051A35 /* Pipe.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,10 +273,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				565C39031AE1CFAA007DA940 /* AboutMeScroller.xib in Resources */,
+				56E937101AEC273E00051A35 /* Pipe.png in Resources */,
 				56998C461ADDC44300BB73B9 /* Main.storyboard in Resources */,
 				561CF06E1AE5687500037CCB /* ProjectsScroller.xib in Resources */,
 				56998C4B1ADDC44300BB73B9 /* LaunchScreen.xib in Resources */,
+				56E937141AEC292C00051A35 /* Background.png in Resources */,
 				56D01A971AE983A300E7940F /* GameScene.sks in Resources */,
+				56E937161AEC300900051A35 /* Ground.png in Resources */,
 				56998C481ADDC44300BB73B9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
