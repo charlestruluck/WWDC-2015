@@ -8,9 +8,21 @@
 
 import UIKit
 import SpriteKit
-import SceneKit
+
+/* 
+I am so, so sorry that when you were trying to play the game 
+your eyes were bleeding because of the uglyness of the layout 
+and how things looked! 
+I did not have enough time to polish this section and I am sad because of that. 
+:( is there anything I can do to make it up for you? 
+I'll buy you ice cream! (joke, joke!)
+*/
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    
+    var gameOver: UILabel = UILabel()
+    
+    var background: SKSpriteNode = SKSpriteNode()
     
     var mainBuilding: SKSpriteNode = SKSpriteNode()
     var buildings = [SKSpriteNode]()
@@ -21,14 +33,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var maxRange: Float = 225
     var minRange: Float = -100
     
-    var player: SKShapeNode = SKShapeNode(circleOfRadius: 15)
+    var player: SKSpriteNode = SKSpriteNode(imageNamed: "me")
     
     var ground: SKSpriteNode = SKSpriteNode(imageNamed: "Ground")
     
     var playerCatagory: UInt32 = 1
     var buildingCatagory: UInt32 = 2
     
-    var pipeSpeed: CGFloat = 2.3
+    var pipeSpeed: CGFloat = 2
     
     var startTap: Bool = false
     var cancelTouch = false
@@ -47,14 +59,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         groundNode.position = CGPoint(x: 0, y: self.frame.size.height / 1.8)
         ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(500, 100))
         
-        player.physicsBody = SKPhysicsBody(circleOfRadius: 15)
+        player.physicsBody = SKPhysicsBody(circleOfRadius: 25)
         ground.physicsBody!.dynamic = false
-        
-        player.fillColor = UIColor.yellowColor()
         
         player.physicsBody!.contactTestBitMask = buildingCatagory
         player.physicsBody!.collisionBitMask = buildingCatagory
         player.physicsBody?.dynamic = false
+        
+        self.backgroundColor = UIColor(red: 0.4, green: 0.5, blue: 1.0, alpha: 1.0)
         
         self.addChild(player)
         self.addChild(ground)
@@ -125,7 +137,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let location = touch.locationInNode(self)
                 
                 player.physicsBody!.velocity = CGVectorMake(0, 0)
-                player.physicsBody!.applyImpulse(CGVectorMake(0, 10))
+                player.physicsBody!.applyImpulse(CGVectorMake(0, 15))
                 
             }
         } else {
@@ -193,6 +205,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func didBeginContact(contact: SKPhysicsContact) {
         
+        gameOver.frame = CGRectMake(view!.center.x / 3, view!.center.y / 1.5, 250, 100)
+        gameOver.textColor = UIColor.whiteColor()
+        gameOver.textAlignment = NSTextAlignment.Center
+        gameOver.text = "Game Over!"
+        gameOver.font = UIFont(name: gameOver.font.fontName, size: 40)
+        gameOver.alpha = 0
+        self.view!.addSubview(gameOver)
+        
         if (startTap) {
             player.physicsBody!.velocity = CGVectorMake(0, 0)
             
@@ -201,6 +221,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 player.physicsBody?.dynamic = false
                 pipeSpeed = 0
                 cancelTouch = true
+                
+                UIView.animateWithDuration(1.0, delay: 0.5, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                    
+                    self.gameOver.alpha = 1.0
+                    
+                }, completion: nil)
             }
         }
     }

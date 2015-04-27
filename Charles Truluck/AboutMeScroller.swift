@@ -15,20 +15,18 @@ class AboutMeScroller: UIView {
     
     override func awakeFromNib() {
         
-    //Map Stuff
+    //Wait, no hold on. Your name is Charles and you live in... Charles-Ton? What a coincidence!
     let location = CLLocationCoordinate2D(
         latitude: 32.7738,
         longitude: -79.9671
     )
     
-    let span = MKCoordinateSpanMake(0.05, 0.05)
+    let span = MKCoordinateSpanMake(1.0, 1.0)
     let region = MKCoordinateRegion(center: location, span: span)
     mapView.setRegion(region, animated: true)
     
     let annotation = MKPointAnnotation()
     annotation.coordinate = location
-    annotation.title = "Charleston"
-    annotation.subtitle = "South Carolina"
     mapView.addAnnotation(annotation)
         
     }

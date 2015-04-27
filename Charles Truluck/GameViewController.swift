@@ -27,9 +27,15 @@ extension SKNode {
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        backButton.layer.cornerRadius = 6
+        backButton.layer.borderWidth = 2
+        backButton.layer.borderColor = UIColor.orangeColor().CGColor
+        
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.
             let skView = self.view as! SKView
